@@ -1,43 +1,39 @@
-# Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored
+# Implementation of Simple Linear Regression Model for Predicting the Marks Scored
 
-## AIM:
+# AIM:
 To write a program to predict the marks scored by a student using the simple linear regression model.
 
-## Equipments Required:
+# EQUIPMENTS REQUIRED:
 1. Hardware – PCs
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
-## Algorithm
-1.Import the needed packages
-2.Assigning hours To X and Scores to Y
-3.Plot the scatter plot
-4.Use mse,rmse,mae formmula to find.
+# ALGORITHM:
+1. Import the standard Libraries.
+2. Set variables for assigning dataset values.
+3. Import linear regression from sklearn.
+4. Assign the points for representing in the graph
+5. Predict the regression for marks by using the representation of the graph.
+6. Compare the graphs and hence we obtained the linear regression for the given datas.
 
-
-## Program:
+# PROGRAM:
 ```
 /*
 Program to implement the simple linear regression model for predicting the marks scored.
-Developed by: Yashaswi Mitta
-RegisterNumber:  212221230062
+Developed by: PAARKAVY B
+RegisterNumber: 212221230072 
+*/
+```
 
-import pandas as pd
-import numpy as np
-dataset=pd.read_csv('/content/Placement_Data.csv')
-print(dataset.iloc[3])
+```
+# implement a simple regression model for predicting the marks scored by the students
 
-print(dataset.iloc[0:4])
-
-print(dataset.iloc[:,1:3])
-
-#implement a simple regression model for predicting the marks scored by students
 import pandas as pd
 import numpy as np
 dataset=pd.read_csv('/content/student_scores.csv')
+print(dataset)
 
-#implement a simple regression model for predicting the marks scored by students
-#assigning hours to X& Scores to Y
-X=dataset.iloc[:,:-1].values
+# assigning hours to X & Scores to Y
+X=dataset.iloc[:,:1].values
 Y=dataset.iloc[:,1].values
 print(X)
 print(Y)
@@ -53,38 +49,37 @@ Y_pred=reg.predict(X_test)
 import matplotlib.pyplot as plt
 from sklearn.metrics import mean_absolute_error,mean_squared_error
 
-plt.scatter(X_train,Y_train,color="green")
+plt.scatter(X_train,Y_train,color='green')
 plt.plot(X_train,reg.predict(X_train),color='red')
-plt.title("Traning set (H vs S)")
+plt.title('Training set (H vs S)')
 plt.xlabel("Hours")
 plt.ylabel("Scores")
-plt.show()
+plt.show
 
-plt.scatter(X_test,Y_test,color="purple")
-plt.plot(X_test,reg.predict(X_test),color="pink")
-plt.title("Test set (H vs S)")
+plt.scatter(X_test,Y_test,color='purple')
+plt.plot(X_test,reg.predict(X_test),color='blue')
+plt.title('Test set(H vs S)')
 plt.xlabel("Hours")
 plt.ylabel("Scores")
 plt.show()
 
 mse=mean_squared_error(Y_test,Y_pred)
-print("MES = ",mse)
+print('MSE = ',mse)
 
 mae=mean_absolute_error(Y_test,Y_pred)
-print("MAE = ",mae)
+print('MAE = ',mae)
 
 rmse=np.sqrt(mse)
 print("RMSE = ",rmse)
-*/
 ```
 
-## Output:
-<img width="886" alt="2022-10-09 (12)" src="https://user-images.githubusercontent.com/94505585/194763069-8080b95e-89c0-4b6e-9179-bbdb8dcd9abc.png">
-<img width="889" alt="2022-10-09 (14)" src="https://user-images.githubusercontent.com/94505585/194763080-d57f5005-549a-470a-8f10-dbdcece2ac92.png">
-<img width="903" alt="2022-10-09 (15)" src="https://user-images.githubusercontent.com/94505585/194763086-8c4c0153-cf34-4f26-a526-9eb47097f10a.png">
-<img width="902" alt="2022-10-09 (16)" src="https://user-images.githubusercontent.com/94505585/194763092-ef080004-7348-4a52-b550-41c356c70aed.png">
-<img width="904" alt="2022-10-09 (17)" src="https://user-images.githubusercontent.com/94505585/194763098-dd79d2ae-0106-4599-9530-11eadbbb5080.png">
+# OUTPUT:
+![image](https://user-images.githubusercontent.com/94619247/202135463-323afc14-f687-4ab2-9829-016a78de5ab6.png)
+![image](https://user-images.githubusercontent.com/94619247/202135563-6e515e78-ebc5-4b82-9ae1-60cc7fd7d3ca.png)
+![image](https://user-images.githubusercontent.com/94619247/202135605-9d2d729a-2a1f-43f9-ba23-687c86594537.png)
+![image](https://user-images.githubusercontent.com/94619247/202135668-245643fd-7f77-4607-bbd6-1b2369d30979.png)
+![image](https://user-images.githubusercontent.com/94619247/202135706-0ae58a1c-c7fc-412e-93b6-4b3e77a7caa9.png)
 
 
-## Result:
+# RESULT:
 Thus the program to implement the simple linear regression model for predicting the marks scored is written and verified using python programming.
