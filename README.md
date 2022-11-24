@@ -32,6 +32,8 @@ import numpy as np
 dataset=pd.read_csv('/content/student_scores.csv')
 print(dataset)
 
+dataset.head()
+dataset.tail()
 # assigning hours to X & Scores to Y
 X=dataset.iloc[:,:1].values
 Y=dataset.iloc[:,1].values
@@ -75,6 +77,8 @@ print("RMSE = ",rmse)
 
 # OUTPUT:
 ![image](https://user-images.githubusercontent.com/94619247/202135463-323afc14-f687-4ab2-9829-016a78de5ab6.png)
+<img width="109" alt="image" src="https://user-images.githubusercontent.com/94619247/203786480-899bfbdb-3b42-49a2-b150-a036d9f3a60a.png">
+<img width="114" alt="image" src="https://user-images.githubusercontent.com/94619247/203786527-32a3a921-e872-47d7-b6ee-b65fbd920e83.png">
 ![image](https://user-images.githubusercontent.com/94619247/202135563-6e515e78-ebc5-4b82-9ae1-60cc7fd7d3ca.png)
 ![image](https://user-images.githubusercontent.com/94619247/202135605-9d2d729a-2a1f-43f9-ba23-687c86594537.png)
 ![image](https://user-images.githubusercontent.com/94619247/202135668-245643fd-7f77-4607-bbd6-1b2369d30979.png)
